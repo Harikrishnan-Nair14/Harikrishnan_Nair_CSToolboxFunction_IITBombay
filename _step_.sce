@@ -1,4 +1,5 @@
 /*
+
 Description about this function:
 
 01. Get the number of output and input arguments of the function.

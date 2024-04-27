@@ -192,21 +192,21 @@ t = 0:0.01:08;
 u = ones(1, length(t));
 y1 = step(u, t, ss_g1);
 scf();
-plot(t, y1, 'b'); // Plot the response in blue
+plot(t, y1, 'b'); 
 title('Test Case 1');
 xlabel('Time [s]');
 ylabel('y1');
 
 mprintf("Transfer Function: \n");
-disp(g1);    // Display the transfer function g1 in the console
+disp(g1);    
 mprintf("\nState-Space Representation: \n");
-disp(ss_g1);    // Display the state-space representation ss_g1 in the console
+disp(ss_g1);    
 mprintf("\nPoles of the System: \n");
-disp(roots(g1(3)));    // Compute and display the roots of the denominator polynomial of g1 in the console
+disp(roots(g1(3)));    
 mprintf("\nFinal Value of the Step Response: \n");
-disp(y1($));    // Display the final value of the step response y1 in the console
+disp(y1($));    
 mprintf("\nFull Step Response Output: \n");
-disp(y1);    // Display the full step response output y1 in the console
+disp(y1);    
 
 //-----------------------------------------------------------------------------------------------------------//
 

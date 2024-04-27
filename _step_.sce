@@ -11,7 +11,7 @@ function [y,x]=_step_(u,dt,sl,x0,tol)
     if rhs<3 then // If the number of input arguments is less than 3
         msg = _("%s: Wrong number of input arguments: At least %d expected.\n");
         error(msprintf(msg, "_step_", 3)); // Display an error message
-    end
+    end 
 
     sltyp=typeof(sl); // Get the type of the linear dynamical system sl
     if and(sltyp<>["state-space" "rational" "zpk"]) then // If the type of sl is not one of "state-space", "rational", or "zpk"

@@ -27,7 +27,7 @@ function ob = obsv(varargin)
     
     if nargin == 1
         sys = varargin(1);
-        ob = ctrb(sys').';
+        ob = ctrb(sys);
     elseif nargin == 2
         a = varargin(1);
         c = varargin(2);

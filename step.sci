@@ -188,7 +188,7 @@ endfunction
 s = %s;
 g1 = syslin('c', 1 / (2 * s^2 + 3 * s^1 + 4));
 ss_g1 = tf2ss(g1);
-t = 0:0.01:08;
+t = 0:0.01:09;
 u = ones(1, length(t));
 y1 = step(u, t, ss_g1);
 scf();
@@ -212,11 +212,15 @@ disp(y1);
 
 //Test Case 2:
 
+s = %s;
 g2 = syslin('c', 1 / (s^2 + s + 1));
 ss_g2 = tf2ss(g2);
+t = 0:0.01:20;
+u = ones(1, length(t));
 y2 = step(u, t, ss_g2);
+scf();
 plot(t, y2, 'g'); 
-title('Test Case 2');
+title('Step Response');
 xlabel('Time [s]');
 ylabel('y2');
 
@@ -235,11 +239,15 @@ disp(y2);
 
 //Test Case 3:
 
+s = %s;
 g3 = syslin('c', 1 / (s^2 + 0.5 * s + 1));
 ss_g3 = tf2ss(g3);
+t = 0:0.01:30;
+u = ones(1, length(t));
 y3 = step(u, t, ss_g3);
+scf();
 plot(t, y3, 'r');
-title('Test Case 3');
+title('Step Response');
 xlabel('Time [s]');
 ylabel('y3');
 
@@ -258,14 +266,19 @@ disp(y3);
 
 //Test Case 4:
 
+s = %s;
 g4 = syslin('c', 1 / (s^2 + 0.1 * s + 1));
 ss_g4 = tf2ss(g4);
+t = 0:0.01:0200;
+u = ones(1, length(t));
 y4 = step(u, t, ss_g4);
+scf();
 plot(t, y4, 'm'); 
-title('Test Case 4');
+title('Step Response');
 xlabel('Time [s]');
 ylabel('y4');
 
+/*
 mprintf("Transfer Function: \n");
 disp(g4);  
 mprintf("\nState-Space Representation: \n");
@@ -276,6 +289,6 @@ mprintf("\nFinal Value of the Step Response: \n");
 disp(y4($));    
 mprintf("\nFull Step Response Output: \n");
 disp(y4);    
+*/
 
 //-----------------------------------------------------------------------------------------------------------//
-*/

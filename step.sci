@@ -278,7 +278,7 @@ title('Step Response');
 xlabel('Time [s]');
 ylabel('y4');
 
-/*
+
 mprintf("Transfer Function: \n");
 disp(g4);  
 mprintf("\nState-Space Representation: \n");

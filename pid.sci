@@ -111,10 +111,10 @@ endfunction
 
 mprintf('\nDISCLAIMER: Entering all values as 0s would make the index to be invalid....\n');
 
-displayTransferFunction(0.1, 0.02, 3, 0.4, 5);
-displayTransferFunction(0.01, 20.115, 0.23, 4.2, 0);
-displayTransferFunction(0, 2, 0, 4.05, 0.0001);
-displayTransferFunction(10, 20, 0, 0, 0 );
+displayTransferFunction(0.1, 0.02, 3, 0.4, 5); // Test Case 1
+displayTransferFunction(0.01, 20.115, 0.23, 4.2, 0); // Test Case 2
+displayTransferFunction(0, 2, 0, 4.05, 0.0001); // Test Case 3
+displayTransferFunction(10, 20, 0, 0, 0 ); // Test Case 4
 
 //-----------------------------------------------------------------------------------------------------------//
 
